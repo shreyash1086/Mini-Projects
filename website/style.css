@@ -1,0 +1,837 @@
+body {
+    display: block;
+    margin: 0px;
+}
+
+.header {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 140px;
+    height: 58px;
+    /* width: 1320px; */
+    /* padding: 0px 40px; */
+}
+
+.leftCont {
+    margin: 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.leftCont h2 {
+    padding: 0px;
+    line-height: 58px;
+    margin: 0px;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -0.2px;
+    text-decoration: none;
+}
+
+.leftCont img {
+    padding: 14px 9px 12px 0px;
+}
+
+.leftCont ul {
+    margin: 0px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+    color: #1e1e1e;
+    padding-left: 15px;
+}
+
+.leftCont ul li {
+    cursor: pointer;
+    line-height: 58px;
+    list-style-type: none;
+    padding: 0px 12px;
+    font-size: 16px;
+}
+
+.rightCont {
+    margin: 0px;
+    padding: 10px 10px 10px 10px;
+    display: flex;
+    justify-content: center;
+    width: 340px;
+}
+
+.rightCont img {
+    margin-top: 8px;
+    margin-right: 10px;
+}
+
+.searchBar {
+    display: flex;
+    justify-content: baseline;
+    margin: 0px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-right: 8px;
+    margin-top: 3px;
+    height: 32px;
+    border-radius: 4px;
+}
+
+.searchBar img {
+    margin-left: 10px;
+}
+
+.searchBar input {
+    border: none;
+    outline: none;
+    width: 164px;
+}
+
+/* . input {
+    height: 25px;
+    padding-top: 2px;
+    margin-top: 4px;
+    border-radius: 4px;
+} */
+
+.rightCont button {
+    height: 32px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 4px;
+    border: transparent;
+    color: white;
+    padding: 0px 16px;
+    background-color: #0078d4;
+    margin-top: 3px;
+}
+
+.message {
+    display: flex;
+    justify-content: center;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 18px 0px 0px;
+    color: #475569;
+}
+
+.message a {
+    margin: 0px 4px;
+    color: #005fb8;
+}
+
+.heading {
+    margin-bottom: 0px;
+    display: flex;
+    height: 250px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    justify-content: center;
+    font-size: 35px;
+    font-weight: 700;
+}
+
+.download {
+    display: flex;
+    justify-content: center;
+}
+
+.down1 {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 4px;
+    border: transparent;
+    color: white;
+    padding: 15px 20px;
+    background-color: #0078d4;
+    margin-right: 5px;
+}
+
+.down2 {
+    margin-left: 5px;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 15px 20px;
+    background: #EAEAEA;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.message2 {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    margin-top: 10px;
+    font-size: 12px;
+    color: #475569;
+    display: flex;
+    font-weight: 600;
+    justify-content: center;
+}
+
+.message2 u a {
+    color: #005fb8;
+}
+
+.video {
+    display: flex;
+    justify-content: center;
+}
+
+.videoVS {
+    /* width: 90%; */
+    /* height: 85%; */
+    position: absolute;
+    transform: translate(50%, 50%);
+    top: 22%;
+    left: -16%;
+    box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, .16);
+    border-radius: 12px;
+}
+
+.video img {
+    width: 1240px;
+    height: 832px;
+    border-radius: 24px;
+    margin-top: 50px;
+}
+
+.play {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.play button {
+    font-size: 20px;
+    font-weight: 500;
+    background: white;
+    padding: 8px 20px 8px 20px;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+.play button:hover {
+    border: 2px solid black;
+    border-radius: 8px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    margin-top: 90px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+.card {
+    width: 336px;
+    height: 360px;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    border-radius: 10px;
+    padding: 0px 16px;
+}
+
+.card h3 {
+    font-size: 20px;
+    margin-bottom: 0px;
+    color: #242424;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    line-height: 150%;
+}
+
+.card p {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 160%;
+    color: #475569;
+    margin-bottom: 10px;
+}
+
+.card img {
+    height: 198.48px;
+}
+
+
+.cardX {
+    width: 372px;
+    height: 360px;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    border-radius: 10px;
+    margin: 0px 50px;
+    padding: 0px 16px;
+
+}
+
+.cardX h3 {
+    font-size: 20px;
+    margin-bottom: 0px;
+    color: #242424;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    line-height: 150%;
+}
+
+.cardX p {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 160%;
+    color: #475569;
+    margin-bottom: 10px;
+}
+
+
+.cardX img {
+    height: 198.48px;
+}
+
+
+.cardY {
+    width: 336px;
+    height: 360px;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    border-radius: 10px;
+    padding: 0px 16px;
+}
+
+.cardY h3 {
+    font-size: 20px;
+    margin-bottom: 0px;
+    color: #242424;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    line-height: 150%;
+}
+
+.cardY p {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 160%;
+    color: #475569;
+    margin-bottom: 10px;
+}
+
+.cardY img {
+    height: 179.38px;
+}
+
+.banner {
+    background-image: url(./copilot-free-banner-bg-light.webp);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    margin: 50px auto;
+    padding: 40px 0px;
+    width: 1240px;
+    border-radius: 10px;
+    height: 90px;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+.leftCont2 {
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    padding: 0px 340px 0px 20px;
+    /* line-height: 100%; */
+}
+
+.rightCont2 {
+    padding-right: 135px;
+    color: #1e1e1e;
+    font-size: 16px;
+    font-weight: 500;
+    align-items: center;
+}
+
+.rightCont2 p {
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.rightCont2 button {
+    padding: 8px 14px 8px 14px;
+    margin-top: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.createFaster {
+    display: flex;
+    justify-content: space-between;
+    height: 580px;
+    width: 1240px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    margin: 0px auto;
+}
+
+.createFaster div {
+    margin-top: 50px;
+}
+
+.createFaster div h2 {
+    margin-top: 60px;
+    color: #242424;
+    font-weight: 600;
+    font-size: 30px;
+    letter-spacing: -0.5px;
+    line-height: 150%;
+    margin-bottom: -10px;
+}
+
+.createFaster div p {
+    margin-top: 22px;
+    line-height: 160%;
+    font-size: 16px;
+    color: #475569;
+    font-weight: 600;
+    padding-right: 70px;
+    margin-bottom: 10px;
+}
+
+.createFaster div a {
+    color: #005fb8;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.createFaster div img {
+    border-radius: 16px;
+    width: 800px;
+    height: auto;
+}
+
+.codeEfficiently {
+    display: flex;
+    justify-content: space-between;
+    height: 580px;
+    width: 1240px;
+    margin: 145px auto 80px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+.codeEfficiently div {
+    margin-right: 0px;
+}
+
+.codeEfficiently div h2 {
+    margin-top: 120px;
+    color: #242424;
+    font-weight: 600;
+    font-size: 30px;
+    letter-spacing: -0.5px;
+    line-height: 150%;
+    margin-bottom: -10px;
+}
+
+.codeEfficiently div p {
+    margin-top: 22px;
+    line-height: 160%;
+    font-size: 16px;
+    color: #475569;
+    font-weight: 600;
+    padding-right: 80px;
+    /* margin-bottom: 10px; */
+}
+
+.codeEfficiently div a {
+    color: #005fb8;
+    font-weight: 500;
+    /* margin-bottom: 10px; */
+}
+
+.codeEfficiently div img {
+    border-radius: 16px;
+    width: 800px;
+    height: auto;
+}
+
+.codeWithExtensions {
+    display: flex;
+    justify-content: space-between;
+    width: 1240px;
+    margin: 0px auto 0px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+.codeWithExtensions div {
+    margin-right: 0px;
+}
+
+.codeWithExtensions div h2 {
+    margin-top: 100px;
+    color: #242424;
+    font-weight: 600;
+    font-size: 30px;
+    letter-spacing: -0.5px;
+    line-height: 150%;
+    margin-bottom: -10px;
+}
+
+.codeWithExtensions div p {
+    margin-top: 22px;
+    line-height: 160%;
+    font-size: 16px;
+    color: #475569;
+    font-weight: 600;
+    padding-right: 80px;
+    /* margin-bottom: 10px; */
+}
+
+.codeWithExtensions div a {
+    color: #005fb8;
+    font-weight: 500;
+    /* margin-bottom: 10px; */
+}
+
+.codeWithExtensions div img {
+    border-radius: 16px;
+    width: 800px;
+    height: auto;
+}
+
+
+.ExtensionCard div div {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 0px;
+}
+
+.mask-img {
+    mask-image: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.1));
+}
+
+.ExtensionCard div div a {
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    display: flex;
+    background: rgba(0, 0, 0, 0.01);
+    justify-content: space-between;
+    text-decoration: none;
+    height: 70px;
+    width: 220px;
+    gap: 12px;
+    padding: 16px;
+    border-radius: 8px;
+    margin: 16px 16px 0px 0px;
+}
+
+.ExtensionCard div div a img {
+    height: 40px;
+    width: auto;
+    border-radius: 4px;
+}
+
+.details h3 {
+    color: #242424;
+    margin: 0px;
+    margin-top: 2px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.details h3 p {
+    font-size: 14px;
+    text-decoration: none;
+    margin: 0px;
+    margin-top: 6px;
+    line-height: 140%;
+    letter-spacing: 0;
+    width: 171px;
+}
+
+.more {
+    margin-left: 200px;
+    font-size: 13px;
+    color: #475569;
+    font-weight: 500;
+    line-height: 160%;
+    padding-top: 10px;
+}
+
+.codeInAnyLanguage {
+    display: flex;
+    justify-content: space-between;
+    height: 380px;
+    width: 1240px;
+    margin: 0px auto;
+    margin-top: 60px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+/* .codeInAnyLanguage div{
+    margin: 0px 40px;
+} */
+
+.main1 {
+    padding-right: 0px;
+    margin-top: 60px;
+    /* width: 300px; */
+}
+
+.main2 {
+    margin-top: 60px;
+    padding-left: 50px;
+    line-height: 100%;
+}
+
+.codeInAnyLanguage div h3 {
+    color: #242424;
+    font-weight: 600;
+    font-size: 30px;
+    letter-spacing: -0.5px;
+    line-height: 150%;
+    margin-bottom: -10px;
+}
+
+.main1 p {
+    line-height: 160%;
+    font-size: 16px;
+    color: #475569;
+    font-weight: 600;
+
+}
+
+.lang {
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+.speclang {
+    display: flex;
+    width: 200px;
+    /* margin-right: 0px; */
+    padding-left: 50px;
+    padding-right: 30px;
+    margin-top: 0px;
+    margin-bottom: 8px;
+    /* margin-left: 30px; */
+}
+
+.speclang img {
+    padding-top: 0px;
+    margin-right: 8px;
+    height: 40px;
+    width: auto;
+}
+
+.speclang h4 {
+    font-weight: 400;
+    line-height: 100%;
+    padding: 0px 5px 2px 5px;
+    margin-top: 10px;
+    font-size: 16px;
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace !important;
+}
+
+.fullyCustomizable {
+    display: flex;
+    justify-content: space-between;
+    height: 580px;
+    width: 1240px;
+    margin: 0px auto;
+    margin-top: -20px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+.fullyCustomizable div {
+    margin-right: 0px;
+}
+
+.fullyCustomizable div h3 {
+    /* margin-top: 120px; */
+    color: #242424;
+    font-weight: 600;
+    font-size: 30px;
+    letter-spacing: -0.5px;
+    line-height: 150%;
+    margin-bottom: -10px;
+}
+
+.fullyCustomizable div p {
+    margin-top: 22px;
+    line-height: 170%;
+    font-size: 16px;
+    color: #475569;
+    font-weight: 600;
+    padding-right: 80px;
+    /* margin-bottom: 10px; */
+}
+
+.fullyCustomizable div a {
+    color: #005fb8;
+    font-weight: 500;
+    /* margin-bottom: 10px; */
+}
+
+.fullyCustomizable div img {
+    border-radius: 16px;
+    margin-top: 20px;
+    width: 800px;
+    height: auto;
+}
+
+.codeAnywhere {
+    display: flex;
+    justify-content: space-between;
+    height: 580px;
+    width: 1240px;
+    margin: 0px auto;
+    margin-top: -40px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+.codeAnywhere div {
+    margin-right: 0px;
+}
+
+.codeAnywhere div h3 {
+    /* margin-top: 120px; */
+    color: #242424;
+    font-weight: 600;
+    font-size: 30px;
+    letter-spacing: -0.5px;
+    line-height: 150%;
+    margin-bottom: -10px;
+}
+
+.codeAnywhere div p {
+    margin-top: 22px;
+    line-height: 170%;
+    font-size: 16px;
+    color: #475569;
+    font-weight: 600;
+    padding-right: 80px;
+    /* margin-bottom: 10px; */
+}
+
+.codeAnywhere div a {
+    color: #005fb8;
+    font-weight: 500;
+    /* margin-bottom: 10px; */
+}
+
+.codeAnywhere div img {
+    border-radius: 16px;
+    margin-top: 20px;
+    width: 800px;
+    height: auto;
+}
+
+.feature {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 18px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+.feature div h3 {
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: -0.5;
+    margin: auto;
+    text-align: center;
+}
+
+.feature div p {
+    font-size: 16px;
+    margin: auto;
+    margin-top: 18px;
+    font-weight: 500;
+    line-height: 160%;
+    color: #475569;
+    text-align: center;
+}
+
+.infoCards {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    max-width: 1250px;
+    margin: 0px auto;
+    margin-top: 50px;
+}
+
+.cardholder {
+    display: flex;
+}
+
+.DivClass {
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    padding: 24px;
+    margin: 8px;
+    /* height: 149px; */
+    height: auto;
+    width: 290px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.01);
+}
+
+.imgCard {
+    height: 24px;
+    width: 24px;
+    padding: 12px;
+    background-color: rgba(0, 0, 0, 0.04);
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.cardh2 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0px;
+    color: #242424;
+    line-height: 160%;
+}
+
+.cardP {
+    margin: 0px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    padding-top: 8px;
+    color: #475569;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    width: 1320px;
+    margin: auto;
+    padding: 85px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+
+}
+
+.imagesFoot {
+    display: flex;
+    justify-content: start;
+    flex-direction: row;
+    padding-left: 50px;
+    gap: 20px;
+}
+
+.imgFoot {
+    width: 18px;
+    height: 18px;
+    padding: 0px
+}
+
+.footUL {
+    display: flex;
+    margin-top: 20px;
+}
+
+.footLI {
+    font-size: 12px;
+    color: #475569;
+    list-style-type: none;
+    padding-right: 25px;
+}
+
+.rightCont3 {
+    padding-right: 50px;
+}
