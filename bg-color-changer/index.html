@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .button {
+            padding: 10px;
+            border: 1px solid gray;
+            font-weight: 500;
+            border-radius: 12px;
+            width: 120px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        .button:hover{
+            width: 130px;
+        }
+    </style>
+</head>
+
+<body id="body">
+    <div class="body">
+        <div style="width: 1200px;  margin: auto; margin-top: 42%; border: 1px solid gray; border-radius: 9px; box-shadow: 1px 1px 25px 1px;">
+            <div style="display: flex;  gap: 20px; justify-content: space-around; padding: 15px; background: white; border-radius: 10px;">
+                <button class="button" id="1" onclick="change(id = 1)" style="background-color: red; color: white;">Red</button>
+                <button class="button" id="2" onclick="change(id = 2)" style="background-color: yellow;">Yellow</button>
+                <button class="button" id="3" onclick="change(id = 3)" style="background-color: black; color: white;">Black</button>
+                <button class="button" id="4" onclick="change(id = 4)" style="background-color: purple; color: white;">Purple</button>
+                <button class="button" id="5" onclick="change(id = 5)" style="background-color: green; color: white;">Green</button>
+                <button class="button" id="6" onclick="change(id = 6)" style="background-color: blue; color: white;">Blue</button>
+                <button class="button" id ="less" onclick="more()" style="background-color: rgb(51, 51, 53); color: white;">More</button>
+            </div>
+            <div id="more" style="display: flex; display: none;  gap: 20px; justify-content: space-around; padding: 15px; background: white; border-radius: 10px;">
+                <button class="button" id="7" onclick="change(id = 7)" style="background-color: #00FFFF; color: black;">Cyan</button>
+                <button class="button" id="8" onclick="change(id = 8)" style="background-color: #a52a2a;">Brown</button>
+                <button class="button" id="9" onclick="change(id = 9)" style="background-color: #ffc0cb; color: white;">Pink</button>
+                <button class="button" id="10" onclick="change(id = 10)" style="background-color: #ffa500; color: white;">Orange</button>
+                <button class="button" id="11" onclick="change(id = 11)" style="background-color: #d3d3d3; color: black;">Light Gray</button>
+                <button class="button" id="12" onclick="change(id = 12)" style="background-color: #ffd700; color: black;">Gold</button>
+                <button class="button" id="13" onclick="change(id = 13)" style="background-color: #f08080; color: white;">Light Coral</button>
+            </div>
+        </div>
+        
+    </div>
+    <script>
+        function change(id){
+            let color = "";
+            switch(id){
+                case 1:
+                    color="red";
+                    break;
+                case 2:
+                    color="yellow";
+                    break;
+                case 3:
+                    color="black";
+                    break;
+                case 4:
+                    color="purple";
+                    break;
+                case 5:
+                    color="green";
+                    break;
+                case 6:
+                    color="blue";
+                    break;
+                case 7:
+                    color="#00FFFF";
+                    break;
+                case 8:
+                    color="#a52a2a";
+                    break;
+                case 9:
+                    color  = "#ffc0cb"
+                    break;
+                case 10:
+                    color="#ffa500";
+                    break;
+                case 11:
+                    color="#d3d3d3";
+                    break;
+                case 12:
+                    color="#ffd700";
+                    break;
+                case 13:
+                    color="#f08080";
+                    break;
+            }
+            document.getElementById("body").style.backgroundColor=color;
+        }
+
+
+
+        function more(){
+             let x = document.getElementById("more")
+                if(x.style.display === "none"){
+                    x.style.display = "flex"
+                }else{
+                    x.style.display = "none"
+                }
+
+            let y = document.getElementById("less")
+            if(y.innerHTML === "More"){
+                y.innerHTML = "Less"
+            }else{
+                y.innerHTML = "More"
+            }
+        }
+    </script>
+</body>
+
+</html>
