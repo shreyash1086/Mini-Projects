@@ -3,10 +3,17 @@ body{
     padding: 0%;
 }
 
+#main{
+    margin: auto;
+    display: grid;
+      grid-template-columns: auto auto auto;
+}
+
 #card{
     padding: 10px;
     margin-top: 50px;
     margin-left: 50px;
+    margin-bottom: 30px;
     height: 400px;
     width: 300px;
     border: 1px solid black;
@@ -53,6 +60,12 @@ body{
     margin: 0px;
 }
 
+#sub{
+    padding: 0px;
+    margin: 0px;
+    font-size: small;
+}
+
 #body{
     margin-top: 20px;
 }
@@ -76,6 +89,10 @@ body{
     border: 1px solid black;
 }
 
-#stats h5{
+#height{
+    margin: auto;
+}
+
+#weight{
     margin: auto;
 }
