@@ -1,0 +1,53 @@
+body {
+    margin: 0%;
+    padding: 0%;
+    display: flex;
+    justify-content: center;
+}
+
+#main {
+    margin-top: 10%;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+#signup {
+    height: 400px;
+    width:  400px;
+    border: 1px solid black;
+    border-radius: 30px;
+    display: grid;
+    padding: 60px 40px;
+}
+
+#email  {
+    height: 50px;
+    font-size: medium;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+
+#name {
+    height: 50px;
+    font-size: medium;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+
+#password{
+    height: 50px;
+    font-size: medium;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+
+#sign{
+    height: 50px;
+    font-size: medium;
+    margin-top: 10%;
+    margin-bottom: 0%;
+    width: 120px;
+}
