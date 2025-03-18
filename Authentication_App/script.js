@@ -1,28 +1,40 @@
 let button1 = document.getElementById("signU")
 button1.addEventListener("click",signup)
 
-function signup() {
+async function signup() {
     let email = document.getElementById("email").value;
     let name = document.getElementById("name").value;
     let password = document.getElementById("password").value;
 
-    axios.post("http://localhohst:3000/signup", {
-        email: email,
-        name: name,
-        password,password
-    })
+    try {
+        await axios.post("http://localhost:3000/signup", {
+            email: email,
+            name: name,
+            password: password
+        })
+        alert("Successfully signed up")
+        
+    } catch (err) {
+        alert(err) 
+        console.log(err)
+    }
 }
 
-function signin() {
+async function signin() {
     let email = document.getElementById("email").value;
     let password = document.getElementById("password").value;
 
-    const response = axios.post("http://localhohst:3000/signin", {
-        email: email,
-        password, password
-    })
-}
+    try {
+        const response = await axios.post("http://localhost:3000/signin", {
+            email: email,
+            password: password
+        })
+        res.json({
 
-function getInfo() {
-    axios.post()
+        })
+    } catch (err) {
+        res.json({
+            ERROR:err.message
+        })
+    }
 }

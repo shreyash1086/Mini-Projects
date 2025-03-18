@@ -2,15 +2,19 @@ const express = require("express");
 const app = express();
 const { UserModel } = require("./db")
 const mongoose = require("mongoose")
+const jwt = require("jsonwebtoken")
 const bcrypt = require("bcrypt")
 const users = []
 const JWT_SECRET = "ILOVEMERN"
-
+const cors = require("cors")
 mongoose.connect(
-    "mongodb+srv://shreyashdamodar1086:yrAqvo4WTSXkMPBY@cluster0.gwmn5.mongodb.net/AuthenticationApp"
+    ""
 )
 
+app.use(cors())
+
 app.use(express.json());
+
 app.post("/signup", async (req, res) => {
     const email = req.body.email;
     const name = req.body.name;
@@ -33,7 +37,7 @@ app.post("/signup", async (req, res) => {
 
     if (!errorthrown) {
         res.json({
-            messege: "SucessFully Logged In"
+            messege: "SucessFully Signed Up"
         });
     }
 
@@ -56,9 +60,10 @@ app.post("/signin", async (req, res) => {
     const passMatch = await bcrypt.compare(password, user.password)
 
     if (passMatch) {
-        const token = jwt.sign({ id: user_id.toString() }, JWT_SECRET);
+        const token = jwt.sign({ id: user._id.toString() }, JWT_SECRET);
         res.json({
-            token:token,
+            token: token,
+            password:user.password
         });
     } else {
         res.status(403).json({
