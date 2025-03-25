@@ -20,10 +20,10 @@ Authentication Flow
 
 - Initially, while learning the basic backend application, I created an `in-memory variable` to store user information like usernames and passwords of new users who sign up for the application by hitting the `/signup` handler.
 
--Once the user successfully signs up, they will sign in with the same credentials. If the user provides valid information, they will be signed in and also provided with a `JWT token`, which is stored in the user's browser memory, called `LocalStorage`.
+- Once the user successfully signs up, they will sign in with the same credentials. If the user provides valid information, they will be signed in and also provided with a `JWT token`, which is stored in the user's browser memory, called `LocalStorage`.
 
--So, whenever the user makes future requests, they don't have to send their credentials again and again. They can simply send the token stored in the browser to `authenticate` themselves.
+- So, whenever the user makes future requests, they don't have to send their credentials again and again. They can simply send the token stored in the browser to `authenticate` themselves.
 
--After the user successfully signs in, the backend receives the token stored in `LocalStorage`, verifies it, and checks whether the user is present in the `in-memory variable`.
+- After the user successfully signs in, the backend receives the token stored in `LocalStorage`, verifies it, and checks whether the user is present in the `in-memory variable`.
 
--If the user is found, the backend returns the `username` and `password` back to them.
+- If the user is found, the backend returns the `username` and `password` back to them.
