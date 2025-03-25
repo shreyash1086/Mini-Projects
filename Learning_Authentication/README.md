@@ -27,3 +27,11 @@ Authentication Flow
 - After the user successfully signs in, the backend receives the token stored in `LocalStorage`, verifies it, and checks whether the user is present in the `in-memory variable`.
 
 - If the user is found, the backend returns the `username` and `password` back to them.
+
+### Here is a Snap shot
+
+
+![Screenshot 2025-03-25 220306](https://github.com/user-attachments/assets/f7b2d80d-4757-4c32-aaa2-1b8059859350)
+
+
+Thank you for reading
