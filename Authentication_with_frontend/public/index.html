@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="main">
+        <div id="signup">
+            <input type="text" placeholder="Username" id="Username_U" style="padding: 5px;">
+            <input type="text" placeholder="Password" id="Password_U" style="padding: 5px;">
+            <input type="text" placeholder="Name" id="Name_U" style="padding: 5px;">
+            <button id="signup_but">Sign Up</button>
+        </div>
+        <div id="signin" style="display: none;">
+            <input type="text" placeholder="Username" id="Username_I" style="padding: 5px;">
+            <input type="text" placeholder="Password" id="Password_I" style="padding: 5px;">
+            <button id="signin_but">Sign in</button>
+        </div>
+        <button id="info" style="display: none;">ME</button>    
+        <div id="information"></div>
+        <button id="signout" style="display: none;">Sign Out</button>
+    </div>
+
+    <script>
+        document.getElementById("signout").addEventListener("click",signout)
+        document.getElementById("signup_but").addEventListener("click", signup)
+        document.getElementById("signin_but").addEventListener("click", signin)
+        document.getElementById("info").addEventListener("click",information)
+        async function signup() {
+            const username = document.getElementById("Username_U").value
+            const password = document.getElementById("Password_U").value
+            const name = document.getElementById("Name_U").value
+
+            await axios.post("http://localhost:3000/signup", {
+                username: username,
+                password: password,
+                name: name
+            })
+
+            alert("You have Signed in Successfully")
+            document.getElementById("signup").style.display = "none"
+            document.getElementById("signin").style.display = ""
+
+        }
+
+        async function signin() {
+            const username = document.getElementById("Username_I").value
+            const password = document.getElementById("Password_I").value
+
+            const response = await axios.post("http://localhost:3000/signin", {
+                username: username,
+                password: password
+            });
+
+            const token = response.data.token;
+            localStorage.setItem("token", token)
+
+            document.getElementById("signin").style.display = "none"
+            document.getElementById("signout").style.display = ''
+            document.getElementById("info").style.display = ""
+        }
+
+        async function information() {
+            const token = localStorage.getItem("token")
+            const response = await axios.get("http://localhost:3000/me", {
+                headers: {
+                    token: token
+                }
+            })
+
+            document.getElementById("information").innerHTML = response.data.username +" "+ response.data.password +" "+ response.data.name
+        }
+
+        async function signout(){
+            localStorage.removeItem("token")
+        }
+    </script>
+</body>
+
+</html>

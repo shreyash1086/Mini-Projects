@@ -1,0 +1,30 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    margin-top: 15%;
+}
+
+#main{
+    display: grid;
+    gap: 10px;
+    justify-content: center;
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#signup{
+    display: grid;
+    gap: 10px;
+    /* margin-bottom: 10px; */
+    justify-content: center;
+}
+
+#signin{
+    display: grid;
+    gap: 10px;
+    /* margin-bottom: 10px; */
+    justify-content: center;
+}
