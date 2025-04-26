@@ -3,17 +3,15 @@ const { userModel } = require("../db");
 const userRouter = Router();
 const bcrypt = require("bcrypt")
 const { z } = require("zod")
-const { USER_SECRET } = require("../config")
+const { USERS_SECRET } = require("../config")
 const jwt = require("jsonwebtoken");
-const { error } = require("npmlog");
 
 userRouter.post("/signup", async (req, res) => {
-
     const requiredBody = z.object({
         email: z.string().min(5).max(50).email(),
         password: z.string().min(6).max(20),
         firstName: z.string().min(3).max(10),
-        lastNmae: z.string().min(3).max(10)
+        lastName: z.string().min(3).max(10)
     })
 
     const parsedData = requiredBody.safeParse(req.body)
@@ -32,14 +30,14 @@ userRouter.post("/signup", async (req, res) => {
     try {
         const hashedPassword = await bcrypt.hash(password, 5);
 
-        await userRouter.create({
+        await userModel.create({
             firstName: firstName,
             lastName: lastName,
             email: email,
             password: hashedPassword
         })
     } catch (err) {
-        res.json({
+        res.status(403).json({
             messege: "Email already exists"
         })
         errorthown = true;
@@ -70,7 +68,7 @@ userRouter.post("/signin", async (req, res) => {
     if (matchPassword) {
         const token = jwt.sign({
             id: user._id
-        }, USER_SECRET)
+        }, USERS_SECRET)
 
         res.json({
             token: token

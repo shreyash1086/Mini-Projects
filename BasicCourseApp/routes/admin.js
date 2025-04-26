@@ -1,19 +1,20 @@
 const { Router } = require("express")
 const { adminModel } = require("../db")
 const adminRouter = Router();
+const jwt = require("jsonwebtoken")
 const { z } = require("zod")
 const bcrypt = require("bcrypt");
 const { ADMIN_SECRET } = require("../config");
 
 adminRouter.post("/signup", async (req, res) => {
     const requiredBody = z.object({
-        firstname: z.string().min(3).max(10),
-        lastName: z.string().min(3).max(3),
+        firstName: z.string().min(3).max(10),
+        lastName: z.string().min(3).max(10),
         email: z.string().min(5).max(50).email(),
         password: z.string().min(6).max(50)
     })
 
-    const parsedData = requiredBody.safeParse(res.body)
+    const parsedData = requiredBody.safeParse(req.body)
 
     if (!parsedData.success) {
         res.status(403).json({
@@ -67,9 +68,9 @@ adminRouter.post("/signin", async (req, res) => {
 
     if (matchedpassword) {
         const token = jwt.sign({
-            id: user_id
+            id: user._id
         }, ADMIN_SECRET)
-        
+
         res.json({
             token: token
         })
