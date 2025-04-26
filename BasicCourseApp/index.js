@@ -6,4 +6,10 @@ const { courseRouter } = require("./routes/course")
 
 app.use(express.json())
 
-app.use("/user",userRouter)
+app.use("/user", userRouter)
+app.use("/admin", adminRouter)
+app.use("/course", courseRouter)
+
+app.listen(4000, () => {
+    console.log("listening to port number 4000")
+})
