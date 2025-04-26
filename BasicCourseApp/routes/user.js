@@ -34,7 +34,7 @@ userRouter.post("/signup", async (req, res) => {
 
         await userRouter.create({
             firstName: firstName,
-            lastNmae: lastName,
+            lastName: lastName,
             email: email,
             password: hashedPassword
         })
