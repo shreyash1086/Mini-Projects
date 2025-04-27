@@ -5,6 +5,8 @@ const jwt = require("jsonwebtoken")
 const { z } = require("zod")
 const bcrypt = require("bcrypt");
 const { ADMIN_SECRET } = require("../config");
+const { adminMiddleware } = require("../middlewares/admin");
+const { courseModel } = require("../db")
 
 adminRouter.post("/signup", async (req, res) => {
     const requiredBody = z.object({
@@ -82,12 +84,57 @@ adminRouter.post("/signin", async (req, res) => {
 
 })
 
-adminRouter.post("/course", async (req, res) => {
+adminRouter.post("/course",adminMiddleware, async (req, res) => {
     //to upload a new course
+    const adminId = req.userId;
+    const { title, description, imageUrl, price } = req.body;
+
+    try {
+        const course = await courseModel.create({
+            title, description, imageUrl, price, creatorId: adminId
+        })
+
+        res.json({
+            messege: "Successfuly Uploded the Course",
+            courseId: course._id
+        })
+    } catch (err) {
+        res.json({
+            messege: "Failed to generate course"
+        })
+    }
+
 })
 
-adminRouter.put("/course", async (req, res) => {
+adminRouter.put("/course",adminMiddleware, async (req, res) => {
     //to update the current course
+    const adminId = req.userId;
+    const { title, description, imageUrl, price, courseId } = req.body;
+
+    const course = await courseModel.updateOne({
+        _id: courseId,
+        creatorId: adminId // while updating the data from the database we should consider which course to update and who is the ownwe of that course
+    },{
+        title, description, imageUrl, price
+    })
+
+    res.json({
+        messege: "course is updated",
+        courseId: course._id
+    })
+    
+})
+
+adminRouter.get("/course/bulk", adminMiddleware, async (req, res) => {
+    const adminId = req.userId
+    const courses = await courseModel.find({
+        creatorId: adminId
+    })
+
+    res.json({
+        messege: "Here are all the courses",
+        courses
+    })
 })
 
 module.exports = {

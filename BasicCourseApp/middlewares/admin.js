@@ -2,8 +2,9 @@ const jwt = require("jsonwebtoken")
 const {ADMIN_SECRET} = require("../config")
 
 function adminMiddleware(req, res, next) {
-    const token = req.header.token;
+    const token = req.headers.token;
     const decodeToken = jwt.verify(token, ADMIN_SECRET)
+
     if (decodeToken) {
         req.userId = decodeToken.id
         next()
